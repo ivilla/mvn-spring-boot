@@ -23,15 +23,14 @@ public class UserController {
     UserService userService;
 
 
-    @RequestMapping(value="/login", method=RequestMethod.POST)
-    public User login(@RequestParam("user") String user,
-                      @RequestParam("password") String password){
-        return userService.getUser(user, password);
+    @RequestMapping(value="/login", method=RequestMethod.GET)
+    public User login (){
+        return userService.getUser();
     }
 
 	@RequestMapping(value="/hello", method=RequestMethod.GET)
    public String hello (){
         return "Hello world";
    }
-   
+
 }

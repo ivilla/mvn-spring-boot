@@ -12,16 +12,12 @@ public class UserService {
     UserRepository userRepository;
 
 
-    public User getUser(String userName, String password){
+    public User getUser(){
       try{
         //logger.debug("....... Getting User from: [ " + startDate + " ] to: [ " + endDate + " ]" );
         User user = new User("ivilla", "qwerty");
-        if(user.equals(user.getUser()) && password.equals(user.getPassword())){
-          return user;
-        } else {
-          return null;
-        }
-
+        return user;
+        
       } catch(Exception e) {
         e.printStackTrace();
         return null;
